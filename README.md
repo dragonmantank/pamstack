@@ -3,7 +3,7 @@ It's like JAMStack, but backed by PHP.
 
 ## How to use
 
-1. Throw your static assets and front-end JS into `public/`. Your main webpage should be `public/index.html`
+1. Throw your static assets and front-end JS into `source/`. Your main webpage should be `source/index.html`
 2. Throw a function into a file inside `functions/`. As an example:
 
 ```php
@@ -32,3 +32,6 @@ be returned.
 
 The routing script will translate that into the proper HTTP status code return and JSON body for your front-end
 to consume.
+
+## Static Site Generation
+PAMStack includes [Sculpin](https://github.com/sculpin/sculpin) as a static site generator. You can put your Sculpin source files into the `source/` directory and Sculpin will build the static portion of your site in the background automatically. Functions included in the `functions/` folder will continue to be invoked dynamically.
